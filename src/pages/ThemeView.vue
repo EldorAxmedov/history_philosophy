@@ -30,6 +30,4 @@ const route = useRoute()
 const themeId = Number.parseInt(route.params.id)
 const theme = computed(() => storeItems.getItemsById(themeId))
 console.log(theme)
-
-
 </script>
