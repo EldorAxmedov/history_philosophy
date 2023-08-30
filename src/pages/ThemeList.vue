@@ -2,7 +2,7 @@
   <div class="q-pa-md q-gutter-md">
     <q-list bordered padding class="rounded-borders" style="max-width: 100%">
      <q-toolbar class="bg-primary text-white shadow-2">
-    <q-toolbar-title>Mavzular</q-toolbar-title>
+    <q-toolbar-title>Themes</q-toolbar-title>
     </q-toolbar>
       <q-item clickable v-ripple v-for="theme in themes" :key="theme.id">
         <q-item-section avatar top>
