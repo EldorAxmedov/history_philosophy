@@ -10,12 +10,9 @@
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
-
         <q-toolbar-title>
-          Quasar App
+         History of philosophy
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -28,7 +25,7 @@
         <q-item-label
           header
         >
-          Essential Links
+          Menu
         </q-item-label>
 
         <EssentialLink
@@ -42,6 +39,18 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+     <q-footer>
+     <div class="q-gutter-y-md" style="max-width: 600px">
+      <q-tabs
+        class="bg-primary text-white shadow-2"
+      >
+        <q-route-tab to="/" name="mails" icon="home"/>
+        <q-route-tab to="/themes" name="alarms" icon="list" label="Themes" />
+        <q-route-tab to="/literatures" name="mails" icon="assignment" label="Literatures"/>
+         <q-route-tab to="/about" name="mails" icon="info_outline"/>
+      </q-tabs>
+      </div>
+      </q-footer>
   </q-layout>
 </template>
 
@@ -51,47 +60,25 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Home',
+    icon: 'home',
+    link: '/#'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: 'Themes',
+    icon: 'list',
+    link: '/#themes'
   },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+   {
+    title: 'Literatures',
+    icon: 'assignment',
+    link: '/#literatures'
   },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+        {
+    title: 'Authors',
+    icon: 'info',
+    link: '/#about'
   },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
 ]
 
 export default defineComponent({
